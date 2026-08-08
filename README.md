@@ -8,7 +8,14 @@
 * Clone Repository
 > ```bash
 > git clone https://github.com/[GITHUB-USERNAME]/Telegram-Bot-in-Cloudflare-Worker/
+
+
+* Install wrangler package
+> ```bash
 > cd Telegram-Bot-in-Cloudflare-Worker
+> npm init -y
+> npm install -D wrangler
+
 
 ---
 ### Make Worker in Cloudflare
@@ -25,4 +32,21 @@
 ### Connecting the worker to the GitHub Repository
 1. In the `Settings` tab, refer to the `Build` section.
 2. Click on the `Connect` button in the `Git repository` section.
-3. 
+3. In this section, select your GitHub account.
+4. 
+
+---
+### Config `wrangler.jsonc`
+> In step `5` of `Make Worker in Cloudflare`, put the name you chose for your worker in front of the `"name":`
+```json
+{
+  "name": "Worker_name",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-07",
+
+  "secrets": {
+    "required": ["BOT_TOKEN"]
+  }
+}
+```
+---
