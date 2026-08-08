@@ -1,0 +1,9 @@
+{
+  "name": "telegram-bot",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-07",
+
+  "secrets": {
+    "required": ["BOT_TOKEN"]
+  }
+}
