@@ -26,3 +26,36 @@ export async function sendMessage(env, chatId, text, options = {}) {
     ...options,
   });
 }
+
+export async function editMessageText(
+  env,
+  chatId,
+  messageId,
+  text,
+  options = {}
+) {
+  return telegramRequest(env, "editMessageText", {
+    chat_id: chatId,
+    message_id: messageId,
+    text,
+    ...options,
+  });
+}
+
+export async function deleteMessage(env, chatId, messageId) {
+  return telegramRequest(env, "deleteMessage", {
+    chat_id: chatId,
+    message_id: messageId,
+  });
+}
+
+export async function answerCallbackQuery(
+  env,
+  callbackQueryId,
+  options = {}
+) {
+  return telegramRequest(env, "answerCallbackQuery", {
+    callback_query_id: callbackQueryId,
+    ...options,
+  });
+}

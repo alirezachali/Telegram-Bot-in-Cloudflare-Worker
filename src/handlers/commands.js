@@ -8,24 +8,14 @@ export async function handleCommand(message, env) {
     await sendMessage(
       env,
       chatId,
-      "سلام رفیق 👋\nیکی از گزینه‌ها رو انتخاب کن:",
+      "سلام رفیق 👋\nبه بات خوش اومدی!",
       {
         reply_markup: {
           inline_keyboard: [
             [
               {
-                text: "👋 سلام",
-                callback_data: "hello",
-              },
-              {
-                text: "📚 راهنما",
-                callback_data: "help",
-              },
-            ],
-            [
-              {
-                text: "ℹ️ درباره بات",
-                callback_data: "about",
+                text: "🏠 باز کردن منو",
+                callback_data: "menu_main",
               },
             ],
           ],
@@ -40,7 +30,7 @@ export async function handleCommand(message, env) {
     await sendMessage(
       env,
       chatId,
-      "راهنما:\n\n/start - شروع\n/help - راهنما"
+      "📚 راهنما\n\n/start - شروع\n/help - راهنما"
     );
 
     return true;
