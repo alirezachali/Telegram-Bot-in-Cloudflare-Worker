@@ -8,13 +8,13 @@ export async function handleCommand(message, env) {
     await sendMessage(
       env,
       chatId,
-      "سلام رفیق 👋\nبه بات خوش اومدی!",
+      "Hello my friend 👋\n Welcome to my personal bot!",
       {
         reply_markup: {
           inline_keyboard: [
             [
               {
-                text: "🏠 باز کردن منو",
+                text: "🏠 Open Menu",
                 callback_data: "menu_main",
               },
             ],
@@ -30,7 +30,7 @@ export async function handleCommand(message, env) {
     await sendMessage(
       env,
       chatId,
-      "📚 راهنما\n\n/start - شروع\n/help - راهنما"
+      "📚 Help\n\n/start - Start bot\n/help - Show all command"
     );
 
     return true;
