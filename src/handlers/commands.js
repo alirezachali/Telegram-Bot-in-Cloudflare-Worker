@@ -36,5 +36,25 @@ export async function handleCommand(message, env) {
     return true;
   }
 
+  if (text === "/about") {
+    await sendMessage(
+      env,
+      chatId,
+      "📚 Help\n\n/start - Start bot\n/help - Show all command"
+    );
+
+    return true;
+  }
+
+  if (text === "/projects") {
+    await sendMessage(
+      env,
+      chatId,
+      "📚 Help\n\n/start - Start bot\n/help - Show all command"
+    );
+
+    return true;
+  }
+
   return false;
 }
